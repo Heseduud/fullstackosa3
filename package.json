@@ -1,0 +1,33 @@
+{
+  "name": "fullstackosa3",
+  "version": "1.0.0",
+  "description": "FullstackMOOC osa 3 tehtävät",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heseduud/fullstackosa3.git"
+  },
+  "keywords": [
+    "backend",
+    "nodeJS"
+  ],
+  "author": "Santeri Nurminen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Heseduud/fullstackosa3/issues"
+  },
+  "homepage": "https://github.com/Heseduud/fullstackosa3#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
