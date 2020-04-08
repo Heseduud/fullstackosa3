@@ -3,8 +3,13 @@ const app = express()
 const morgan = require('morgan')
 const cors = require('cors')
 
+morgan.token('posttoken', (req, res) => { 
+    if (req.method === 'POST') return JSON.stringify(req.body)
+    else return ''
+})
+
 app.use(express.json())
-app.use(morgan(':method :url :status :res[content-length] - :response-time ms :post'))
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms :posttoken'))
 app.use(cors())
 
 let persons = [
@@ -86,8 +91,6 @@ app.post('/api/persons', (req,res) => {
 
     persons = persons.concat(person)
     res.json(person)
-
-    morgan.token('post', (req, res) => { return JSON.stringify(req.body)})
 })
 
 const generateId = (min, max) => {
